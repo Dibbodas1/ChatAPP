@@ -1,0 +1,151 @@
+.chat {
+  flex: 2;
+  border-left: 1px solid #dddddd35;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dddddd35;
+  height: 100%;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd35;
+    .user {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 10px;
+      img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        span {
+          font-weight: bold;
+          font-size: 18px;
+        }
+        p {
+          font-weight: 300;
+          font-size: 14px;
+          color: #a5a5a5;
+        }
+      }
+    }
+    .icons {
+      display: flex;
+      gap: 20px;
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+  .center {
+    flex: 1;
+    padding: 20px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .massage{
+      max-width: 70%;
+      display: flex;
+      gap: 20px;
+      &.own{
+        align-self: flex-end;
+        .text {
+          p{
+            background-color: #5183fe;
+          }
+          }
+        }
+        img{
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .text{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          p{
+            padding: 20px;
+            background-color: #17144fa1;
+          }
+          sapn{
+            font-size: 13px;
+          }
+          img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 10px;
+          }
+        }
+    }
+  }
+  .center::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  .bottom {
+    display: flex;
+    margin-top: auto; ;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #dddddd35;
+    /* gap: 20px; */
+    .icons {
+      display: flex;
+      gap: 20px;
+      img {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+    .inputfild {
+      input {
+        background-color: #dddddd35;
+        flex: 1;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16;
+      }
+    }
+    .emoji {
+        position: relative;
+        .peaker{
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+
+        }
+      img {
+
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+      }
+    
+    }
+    .send {
+      background-color: #5183fe;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
